@@ -1,0 +1,29 @@
+<mat-grid-list cols="1" rowHeight="15:1">
+  <mat-grid-tile class="fancy-title">Please sign in or create an account</mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list label="login-container" cols="1" rowHeight="25:1">
+  <mat-grid-tile label="login-email">
+    <mat-form-field label="email" class="login-element" appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{evaluateErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile label="login-password">
+    <mat-form-field label="password" class="login-element" appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile label="login-button">
+    <button mat-fab extended color="accent">
+      <mat-icon>login</mat-icon>
+      Login
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>

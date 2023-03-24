@@ -14,13 +14,22 @@ import {ClipboardModule} from "@angular/cdk/clipboard";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {LoginComponent} from './top-toolbar/login/login.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatInputModule} from "@angular/material/input";
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatCardModule} from "@angular/material/card";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TopToolbarComponent,
-    ShareComponent
+    ShareComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +42,14 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ClipboardModule,
     MatSidenavModule,
     MatTooltipModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatGridListModule,
+    MatCardModule,
+    MatDividerModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
