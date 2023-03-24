@@ -22,6 +22,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {MatCardModule} from "@angular/material/card";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatProgressBarModule} from "@angular/material/progress-bar";
+import { WelcomeDashboardComponent } from './welcome-dashboard/welcome-dashboard.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
     AppComponent,
     TopToolbarComponent,
     ShareComponent,
-    LoginComponent
+    LoginComponent,
+    WelcomeDashboardComponent
   ],
   imports: [
     BrowserModule,
