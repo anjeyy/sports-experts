@@ -1,0 +1,22 @@
+<button mat-icon-button class="toolbar-icon share-icon" matTooltip="share this website" [matMenuTriggerFor]="menu">
+  <mat-menu class="share-menu" #menu="matMenu">
+    <button name="facebook" mat-menu-item (click)="shareLinkOnFacebook()">
+      <mat-icon class="facebook-icon">facebook</mat-icon>
+      <span>share on facebook</span>
+    </button>
+    <button name="twitter" mat-menu-item (click)="goToLinkWithNewTab(prePopulateTwitterMessage())">
+      <mat-icon class="twitter-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg" alt="Twitter Logo"/>
+        twitter
+      </mat-icon>
+      <span>share on twitter</span>
+    </button>
+    <button name="homepage link" mat-menu-item [cdkCopyToClipboard]="homepageLink" (click)="showCopiedInfo()">
+      <mat-icon>link</mat-icon>
+      <span>share via link</span>
+    </button>
+  </mat-menu>
+
+  <mat-icon>share</mat-icon>
+</button>
+
